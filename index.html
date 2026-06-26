@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghoti Market -আপনার কেনা-বেচার বিশ্বস্ত ঠিকানা</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="icon" type="image/png" href="https://i.ibb.co.com/RG2hrf3y/background-remove-ghoti-market.png">
+    <!-- Meta Description -->
+    <meta name="description" content="ঘটি মার্কেটে সরাসরি সেলারদের সাথে কথা বলে পণ্য কিনুন। প্রতিদিন আকর্ষণীয় ডিসকাউন্ট, সেরা দাম এবং বিশ্বস্ত বিক্রেতাদের কাছ থেকে সহজে কেনাকাটা করুন।">
+    <meta name="keywords" content="ঘটি মার্কেট, Ghoti Market, অনলাইন শপিং, বাংলাদেশ অনলাইন মার্কেটপ্লেস, সেলার শপ, ডিসকাউন্ট অফার">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Ghoti Market - আপনার কেনা-বেচার বিশ্বস্ত ঠিকানা">
+    <meta property="og:description" content="সরাসরি সেলারদের সাথে কথা বলে পণ্য কিনুন এবং সেরা ডিসকাউন্ট উপভোগ করুন।">
+    <meta property="og:image" content="https://i.ibb.co.com/RG2hrf3y/background-remove-ghoti-market.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ghotimarket.com">
+    <meta property="og:site_name" content="Ghoti Market">
+    <link rel="canonical" href="https://www.ghotimarket.com">
+   <style>
+        :root { --primary: #1e272e; --accent: #ff9f43; --bg: #f8f9fa; --text: #2f3542; }
+        body { font-family: 'Hind Siliguri', sans-serif; background: var(--bg); margin: 0; color: var(--text); }
+        
+        /* Loading Animation */
+        #loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg); display: flex; justify-content: center; align-items: center; z-index: 9999; }
+        .spinner { width: 40px; height: 40px; border: 4px solid #ddd; border-top: 4px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        /* Header */
+        header { background: var(--primary); padding: 15px; }
+        .top-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding: 0 10px; }
+        .top-nav a { color: white; text-decoration: none; font-size: 14px; background: rgba(255,255,255,0.1); padding: 6px 15px; border-radius: 20px; transition: 0.3s; }
+        .top-nav a:hover { background: var(--accent); }
+        
+        .search-box { background: white; width: 90%; max-width: 600px; margin: 0 auto; padding: 12px 20px; border-radius: 50px; display: flex; align-items: center; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .search-box input { border: none; outline: none; width: 100%; font-size: 16px; margin-left: 10px; }
+
+        /* Banner */
+        .banner-container { width: 100%; max-width: 1200px; margin: 25px auto; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+        .swiper-slide img { width: 100%; height: 250px; object-fit: cover; }
+
+        /* Shop Grid */
+        .section-header { text-align: center; font-size: 24px; font-weight: bold; margin: 30px 0; color: var(--primary); }
+        .shop-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 15px; max-width: 1200px; margin: 0 auto; }
+        @media (min-width: 768px) { .shop-grid { grid-template-columns: repeat(4, 1fr); } }
+        
+        .shop-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.05); transition: 0.4s; text-decoration: none; color: inherit; display: block; }
+        .shop-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        
+        .banner { height: 100px; background: #e0e0e0; display: flex; align-items: center; justify-content: center; color: #aaa; }
+        .info { padding: 15px; text-align: center; margin-top: -35px; }
+        .logo { width: 70px; height: 70px; border-radius: 50%; border: 4px solid white; background: white; margin: 0 auto; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+        /* Footer & About Section */
+        .about-section { background: white; padding: 50px 20px; text-align: center; margin-top: 50px; }
+        .footer { background: var(--primary); color: white; padding: 40px 20px; text-align: center; }
+        .social-icons a { color: white; font-size: 20px; margin: 0 10px; transition: 0.3s; }
+        .social-icons a:hover { color: var(--accent); }
+    </style>
+</head>
+<body>
+
+    <div id="loader"><div class="spinner"></div></div>
+
+<header>
+    <div class="top-nav">
+        <div>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="termsandcondition.html">Terms</a>
+        </div>
+        <a href="contact.html"><i class="fas fa-headset"></i> Support</a>
+    </div>
+    <div class="search-box">
+        <i class="fas fa-search" style="color:#888"></i>
+        <input type="text" id="shopSearch" placeholder="শপ এর নাম খুঁজুন..." oninput="filterShops()">
+    </div>
+</header>
+
+<div class="swiper banner-container">
+    <div class="swiper-wrapper" id="swiperWrapper"></div>
+</div>
+
+<div class="section-header">জনপ্রিয় সেলার শপ সমূহ</div>
+<div id="shopGrid" class="shop-grid"></div>
+
+<div class="about-section">
+    <h2>ঘটি মার্কেটে কেন কেনাকাটা করবেন?</h2>
+    <p style="max-width: 600px; margin: 0 auto; color: #666; line-height: 1.8;">
+        আমাদের ঘটি মার্কেটে আপনার প্রয়োজনীয় সব ধরনের পণ্য পাওয়া যায়। ফ্যাশন, ইলেকট্রনিক্স থেকে শুরু করে নিত্যপ্রয়োজনীয় সব কিছু এখন আপনার হাতের মুঠোয়। আমরা বিশ্বাস করি গুণগত মান এবং সঠিক সার্ভিসে। আজই আপনার পছন্দের শপ থেকে অর্ডার করুন।
+    </p>
+</div>
+
+<div class="footer">
+    <p>&copy; 2026 Ghoti Market. সর্বস্বত্ব সংরক্ষিত।</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/ghotimarket"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/+8801727003670"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://youtube.com/@ghotimarket"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p style="font-size: 12px; margin-top: 15px; opacity: 0.7;">Powered by Advanced E-commerce Solutions</p>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getFirestore, collection, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+    const db = getFirestore(initializeApp({ apiKey: "AIzaSyBUhNhYvuo_FTvZ5RZR6Gn-4hsUY21S0XE", projectId: "ghotimarket" }));
+    
+    async function loadBanners() {
+        const snap = await getDocs(query(collection(db, "banners"), orderBy("createdAt", "desc")));
+        const wrapper = document.getElementById('swiperWrapper');
+        wrapper.innerHTML = snap.docs.map(d => `<div class="swiper-slide"><img src="${d.data().url}"></div>`).join('');
+        new Swiper('.banner-container', { loop: true, autoplay: { delay: 3000, disableOnInteraction: false } });
+    }
+
+    let allShops = [];
+    async function loadShops() {
+        const snap = await getDocs(collection(db, "users"));
+        allShops = snap.docs.map(d => ({ id: d.id, ...d.data() })).filter(d => d.shopName);
+        render(allShops);
+        document.getElementById('loader').style.display = 'none'; // Hide loader
+    }
+
+    window.filterShops = () => {
+        const term = document.getElementById('shopSearch').value.toLowerCase();
+        render(allShops.filter(s => s.shopName.toLowerCase().includes(term)));
+    };
+
+    function render(shops) {
+        document.getElementById('shopGrid').innerHTML = shops.map(s => `
+            <a href="https://www.ghotimarket.com/profile.html?sellerId=${s.id}" class="shop-card">
+                <div class="banner">${s.shopBanner ? `<img src="${s.shopBanner}" style="width:100%; height:100px; object-fit:cover;">` : 'No Banner'}</div>
+                <div class="info">
+                    <div class="logo">${s.shopLogo ? `<img src="${s.shopLogo}" style="width:100%; height:70px; object-fit:cover;">` : 'No Logo'}</div>
+                    <h3 style="margin:10px 0 0; font-size: 15px;">${s.shopName}</h3>
+                </div>
+            </a>
+        `).join('');
+    }
+
+    loadBanners();
+    loadShops();
+</script>
+</body>
+</html>
