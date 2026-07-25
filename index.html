@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -8,54 +7,282 @@
     <meta name="description" content="ঘটি মার্কেট অ্যাপ ডাউনলোড করুন। দ্রুত এবং নিরাপদ কেনাকাটার জন্য আমাদের অফিশিয়াল অ্যাপ ব্যবহার করুন।">
     <meta name="keywords" content="Ghoti Market, ঘটি মার্কেট, অনলাইন শপিং, অ্যাপ ডাউনলোড, Ghoti Market App">
     <link rel="icon" type="image/png" href="https://www.ghotimarket.com/logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Hind Siliguri', sans-serif; background: #f4f7f6; color: #333; line-height: 1.6; }
-        .main-wrapper { max-width: 600px; margin: 40px auto; padding: 20px; }
-        .app-card { background: #ffffff; padding: 40px; border-radius: 25px; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-        .app-logo { width: 120px; height: 120px; border-radius: 25px; margin-bottom: 20px; object-fit: cover; box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
-        h2 { color: #1a2a3a; margin-bottom: 10px; font-size: 24px; }
-        
-        .screenshot-container { display: flex; overflow-x: auto; gap: 15px; padding: 20px 0; margin-bottom: 20px; scroll-snap-type: x mandatory; scrollbar-width: none; }
-        .screenshot-container::-webkit-scrollbar { display: none; }
-        .screenshot-container img { width: 180px; height: 320px; border-radius: 20px; object-fit: cover; scroll-snap-align: center; border: 4px solid #f4f7f6; box-shadow: 0 5px 15px rgba(0,0,0,0.1); flex-shrink: 0; }
 
-        .features { text-align: left; margin: 25px 0; background: #f9f9f9; padding: 20px; border-radius: 15px; }
-        .features p { margin-bottom: 10px; font-size: 15px; color: #444; }
-        
-        .download-btn { background: linear-gradient(135deg, #25D366, #128C7E); color: #fff; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 18px; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); }
-        .download-btn:hover { transform: translateY(-3px); }
-        
-        .coming-soon-btn { background: #e0e0e0; color: #888; padding: 12px 30px; border-radius: 50px; display: inline-block; cursor: not-allowed; font-weight: bold; margin-top: 15px; border: 1px solid #ccc; }
-        
-        .action-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 25px; }
-        .btn-small { padding: 12px; border-radius: 10px; text-decoration: none; color: white; font-weight: 600; font-size: 14px; }
-        .btn-web { background: #3498db; }
-        .btn-wa { background: #25D366; }
-        .btn-mail { background: #ea4335; }
-        
-        .social-btns { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
-        .social-link { font-size: 24px; color: #333; transition: 0.3s; }
-        .social-link:hover { transform: scale(1.2); }
+        :root {
+            --primary: #FF6B00;
+            --secondary: #FFD600;
+            --accent: #00D26A;
+            --blue: #3498db;
+        }
 
-        .troubleshoot { text-align: left; background: #fff5f5; padding: 20px; border-radius: 15px; margin-top: 25px; border-left: 5px solid #e74c3c; font-size: 13px; }
-        .footer-links { margin-top: 25px; font-size: 13px; color: #888; }
-        .footer-links a { color: #666; text-decoration: underline; margin: 0 5px; }
-.screenshot-container {
-    scroll-behavior: smooth;
-}
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+      .main-wrapper {
+            max-width: 650px;
+            margin: 40px auto;
+            padding: 20px;
+            animation: fadeIn 1s ease;
+        }
+        @keyframes fadeIn { from{opacity:0; transform:translateY(30px)} to{opacity:1; transform:translateY(0)} }
+
+      .app-card {
+            background: #ffffff;
+            padding: 50px 40px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 0 0 3px rgba(255,107,0,0.1), 0 25px 70px rgba(255,107,0,0.15);
+            position: relative;
+        }
+      .app-card::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent), var(--primary));
+            background-size: 400% 400%;
+            border-radius: 30px;
+            z-index: -1;
+            animation: borderGlow 5s ease infinite;
+        }
+        @keyframes borderGlow { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
+
+      .app-logo {
+            width: 140px;
+            height: 140px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            object-fit: cover;
+            box-shadow: 0 12px 35px rgba(255,107,0,0.25);
+            transition: 0.5s;
+        }
+      .app-logo:hover { transform: scale(1.12) rotate(8deg); }
+
+        h2 {
+            color: #1a2a3a;
+            margin-bottom: 8px;
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        /* উপরের বড় টাইপিং */
+        #typing-top{
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 1.5;
+            margin: 15px 0 25px;
+            min-height: 90px;
+            background: linear-gradient(90deg, #FF6B00, #FFD600, #FF6B00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+        }
+        #typing-top::after{ content: "|"; color: #FF6B00; animation: blink.8s infinite; }
+
+      .screenshot-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 18px;
+            padding: 20px 5px;
+            margin-bottom: 25px;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+        }
+      .screenshot-container::-webkit-scrollbar { display: none; }
+      .screenshot-container img {
+            width: 200px;
+            height: 360px;
+            border-radius: 25px;
+            object-fit: cover;
+            scroll-snap-align: center;
+            border: 3px solid #fff;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+            flex-shrink: 0;
+            transition: 0.4s;
+        }
+      .screenshot-container img:hover { transform: translateY(-12px) scale(1.05); }
+
+      .features {
+            text-align: left;
+            margin: 30px 0;
+            background: linear-gradient(135deg, #fff9f5, #fff);
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,107,0,0.15);
+        }
+      .features p {
+            margin-bottom: 12px;
+            font-size: 15px;
+            color: #444;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+     .download-section { margin: 30px 0; }
+
+     .download-typing-wrapper { margin-bottom: 25px; min-height: 80px; }
+        #typing-download{
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 1.6;
+            background: linear-gradient(90deg, #e74c3c, #FF6B00, #e74c3c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+        }
+        #typing-download::after{ content: "|"; color: #e74c3c; animation: blink.8s infinite; }
+        @keyframes blink{ 50%{ opacity:0; } }
+
+     .download-btn-wrap { position: relative; display: inline-block; }
+     .download-btn {
+            background: linear-gradient(135deg, var(--accent), #00A651);
+            color: #fff;
+            padding: 20px 45px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: 0.3s;
+            box-shadow: 0 0 30px rgba(0,210,106,0.6);
+            animation: btnGlow 2s ease-in-out infinite;
+            position: relative;
+            z-index: 2;
+        }
+        @keyframes btnGlow {
+            0%,100% { box-shadow: 0 0 30px rgba(0,210,106,0.6); transform: scale(1); }
+            50% { box-shadow: 0 0 50px rgba(0,210,106,0.9); transform: scale(1.03); }
+        }
+     .download-btn:hover { transform: translateY(-5px) scale(1.06); }
+
+     .finger {
+            position: absolute;
+            bottom: 85%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+            animation: tap 1.4s ease-in-out infinite;
+            z-index: 3;
+            filter: drop-shadow(0 5px 15px rgba(255,107,0,0.4));
+        }
+        @keyframes tap {
+            0%,100% { transform: translateX(-50%) translateY(5px); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+     .seller-btn {
+            background:linear-gradient(135deg,#3498db,#2980b9);
+            box-shadow:0 0 30px rgba(52,152,219,.5);
+            animation: btnGlowBlue 2s ease-in-out infinite;
+        }
+        @keyframes btnGlowBlue {
+            0%,100% { box-shadow: 0 0 30px rgba(52,152,219,.5); }
+            50% { box-shadow: 0 0 50px rgba(52,152,219,.8); }
+        }
+
+      .coming-soon-btn {
+            background: #f0f0f0;
+            color: #666;
+            padding: 14px 35px;
+            border-radius: 50px;
+            display: inline-block;
+            cursor: not-allowed;
+            font-weight: 700;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+        }
+
+      .action-btns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 30px;
+        }
+      .btn-small {
+            padding: 14px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+      .btn-small:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+      .btn-web { background: var(--blue); }
+      .btn-wa { background: var(--accent); }
+      .btn-mail { background: #ea4335; }
+
+      .social-btns {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-top: 25px;
+        }
+      .social-link {
+            font-size: 26px;
+            color: #333;
+            transition: 0.3s;
+            width: 50px; height: 50px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            background: #f5f5f5;
+        }
+      .social-link:hover { transform: scale(1.2) rotate(10deg); background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+      .troubleshoot {
+            text-align: left;
+            background: #fff5f5;
+            padding: 22px;
+            border-radius: 18px;
+            margin-top: 30px;
+            border-left: 5px solid #e74c3c;
+            font-size: 13px;
+        }
+      .footer-links {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #888;
+        }
+      .footer-links a {
+            color: #FF6B00;
+            text-decoration: none;
+            margin: 0 8px;
+            font-weight: 600;
+        }
+      .footer-links a:hover { text-decoration: underline; }
+
+        @media (max-width: 600px) {
+         .app-card { padding: 35px 25px; }
+            h2 { font-size: 24px; }
+            #typing-top { font-size: 22px; min-height: 80px; }
+            #typing-download { font-size: 20px; }
+         .download-btn { padding: 16px 35px; font-size: 16px; }
+        }
     </style>
 </head>
 <body>
-
     <div class="main-wrapper">
         <div class="app-card">
             <img src="https://ghotimarket.com/logo.png" alt="Ghoti Market Logo" class="app-logo">
+
+            <p id="typing-top"></p>
+
             <h2>ঘটি মার্কেট অফিশিয়াল অ্যাপ</h2>
-            <p>আমাদের অ্যাপটি ব্যবহার করে কেনাকাটা করুন আরও সহজ ও দ্রুত!</p>
 
             <div class="screenshot-container">
                 <img src="https://app.ghotimarket.com/20260725_085916.jpg" alt="Screen 1">
@@ -66,22 +293,31 @@
             </div>
 
             <div class="features">
-                <p><i class="fas fa-check-circle" style="color: #25D366;"></i> ফাস্ট এবং স্মুথ কেনাকাটার অভিজ্ঞতা</p>
-                <p><i class="fas fa-check-circle" style="color: #25D366;"></i> নোটিফিকেশনের মাধ্যমে অফার আপডেট</p>
-                <p><i class="fas fa-check-circle" style="color: #25D366;"></i> নিরাপদ ক্যাশ-অন ডেলিভারি ব্যবস্থা</p>
-                <p><i class="fas fa-check-circle" style="color: #25D366;"></i> সেলারদের সাথে কথা বলে পণ্য কেনার সুযোগ</p>
+                <p><i class="fas fa-check-circle" style="color: var(--accent);"></i> ফাস্ট এবং স্মুথ কেনাকাটার অভিজ্ঞতা</p>
+                <p><i class="fas fa-check-circle" style="color: var(--accent);"></i> নোটিফিকেশনের মাধ্যমে অফার আপডেট</p>
+                <p><i class="fas fa-check-circle" style="color: var(--accent);"></i> নিরাপদ ক্যাশ-অন ডেলিভারি ব্যবস্থা</p>
+                <p><i class="fas fa-check-circle" style="color: var(--accent);"></i> সেলারদের সাথে কথা বলে পণ্য কেনার সুযোগ</p>
             </div>
-            
-          <a href="https://github.com/nazrulislam887441234-hash/Ghoti-market/releases/download/2.0.0/GHOTI-MARKET.apk" class="download-btn">
-    <i class="fas fa-download"></i> অ্যাপ ডাউনলোড করুন
-</a>
 
-<div style="margin-top:15px;">
-    <a href="https://app.ghotimarket.com/seller"
-       class="download-btn"
-       style="background:linear-gradient(135deg,#3498db,#2980b9);box-shadow:0 5px 15px rgba(52,152,219,.4);padding:15px 30px;font-size:16px;">
-        <i class="fas fa-user-plus"></i> সেলার অ্যাপ ডাউনলোড করুন
-    </a>
+            <div class="download-section">
+                <div class="download-typing-wrapper">
+                    <p id="typing-download"></p>
+                </div>
+
+                <div class="download-btn-wrap">
+                    <div class="finger">👇</div>
+                    <a href="https://github.com/nazrulislam887441234-hash/Ghoti-market/releases/download/2.0.0/GHOTI-MARKET.apk" class="download-btn">
+                        <i class="fas fa-download"></i> অ্যাপ ডাউনলোড করুন
+                    </a>
+                </div>
+
+                <div style="margin-top:20px;">
+                    <a href="https://app.ghotimarket.com/seller" class="download-btn seller-btn">
+                        <i class="fas fa-user-plus"></i> সেলার অ্যাপ ডাউনলোড করুন
+                    </a>
+                </div>
+            </div>
+
             <div>
                 <span class="coming-soon-btn"><i class="fas fa-clock"></i> Coming Soon to Play Store</span>
             </div>
@@ -106,35 +342,98 @@
             </div>
 
             <div class="footer-links">
-                <p>ভার্সন: v2.0.0 | সাইজ: ৩৩.০১ মেগাবাইট</p>
+                <p>ভার্সন: v2.0.0 | সাইজ: ৩.০১ মেগাবাইট</p>
                 <a href="https://www.ghotimarket.com/privacy-policy.html">গোপনীয়তা নীতি</a> | <a href="https://www.ghotimarket.com/termsandcondition.html">ব্যবহারের শর্তাবলী</a>
             </div>
         </div>
     </div>
+
 <script>
+// স্ক্রিনশট অটো স্লাইড
 const slider = document.querySelector(".screenshot-container");
 const slides = slider.querySelectorAll("img");
-
 let current = 0;
-
 function autoSlide() {
     current = (current + 1) % slides.length;
-
-    slider.scrollTo({
-        left: slides[current].offsetLeft,
-        behavior: "smooth"
-    });
+    slider.scrollTo({ left: slides[current].offsetLeft, behavior: "smooth" });
 }
+let interval = setInterval(autoSlide, 2500);
+slider.addEventListener("touchstart", () => clearInterval(interval));
+slider.addEventListener("touchend", () => interval = setInterval(autoSlide, 2500));
 
-let interval = setInterval(autoSlide, 2000);
+// ১. উপরের টাইপিং - রেগুলার স্পিড + ভুল করে কাটবে
+const typingTop = document.getElementById("typing-top");
+const correctTop = "আমাদের অ্যাপটি ব্যবহার করে কেনাকাটা করুন আরও সহজ ও দ্রুত!";
+const wrongTop = "আমাদের অ্যাপটি ব্যবহার করে কেনাকাটা করুন আরও সহয";
+let topText = "";
+let topI = 0;
+let topPhase = 'wrong';
 
-slider.addEventListener("touchstart", () => {
-    clearInterval(interval);
-});
+function runTopTyping() {
+    if(topPhase === 'wrong'){
+        if(topI < wrongTop.length){
+            topText += wrongTop.charAt(topI);
+            typingTop.innerHTML = topText;
+            topI++;
+            setTimeout(runTopTyping, 70); // নরমাল টাইপিং স্পিড
+        } else {
+            topPhase = 'delete';
+            setTimeout(runTopTyping, 800);
+        }
+    }
+    else if(topPhase === 'delete'){
+        const deleteTo = correctTop.indexOf("সহজ");
+        if(topText.length > deleteTo){
+            topText = topText.slice(0, -1);
+            typingTop.innerHTML = topText;
+            setTimeout(runTopTyping, 35); // দ্রুত কাটবে
+        } else {
+            topI = deleteTo;
+            topPhase = 'correct';
+            setTimeout(runTopTyping, 200);
+        }
+    }
+    else if(topPhase === 'correct'){
+        if(topI < correctTop.length){
+            topText += correctTop.charAt(topI);
+            typingTop.innerHTML = topText;
+            topI++;
+            setTimeout(runTopTyping, 70); // নরমাল টাইপিং স্পিড
+        } else {
+            topPhase = 'wait';
+            setTimeout(runTopTyping, 2500); // 2.5s পর আবার
+        }
+    }
+    else if(topPhase === 'wait'){
+        topText = "";
+        topI = 0;
+        topPhase = 'wrong';
+        typingTop.innerHTML = "";
+        setTimeout(runTopTyping, 500);
+    }
+}
+runTopTyping();
 
-slider.addEventListener("touchend", () => {
-    interval = setInterval(autoSlide, 2000);
-});
+// ২. নিচের টাইপিং - রেগুলার স্পিড
+const typingDownload = document.getElementById("typing-download");
+const downloadText = "বাংলাদেশের অনলাইন মার্কেটপ্লেস!\nদেশের টাকা আর দিব না বিদেশে";
+let downI = 0;
+
+function runDownloadTyping() {
+    if(downI < downloadText.length){
+        typingDownload.innerHTML += downloadText.charAt(downI) === '\n'? '<br>' : downloadText.charAt(downI);
+        downI++;
+        setTimeout(runDownloadTyping, 65); // নরমাল টাইপিং স্পিড
+    } else {
+        setTimeout(() => {
+            typingDownload.innerHTML = '';
+            downI = 0;
+            runDownloadTyping();
+        }, 3000); // 3s পর আবার
+    }
+}
+runDownloadTyping();
+
 </script>
 </body>
 </html>
