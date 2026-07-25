@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -43,24 +44,25 @@
         .troubleshoot { text-align: left; background: #fff5f5; padding: 20px; border-radius: 15px; margin-top: 25px; border-left: 5px solid #e74c3c; font-size: 13px; }
         .footer-links { margin-top: 25px; font-size: 13px; color: #888; }
         .footer-links a { color: #666; text-decoration: underline; margin: 0 5px; }
+.screenshot-container {
+    scroll-behavior: smooth;
+}
     </style>
 </head>
 <body>
 
     <div class="main-wrapper">
         <div class="app-card">
-            <img src="https://i.ibb.co.com/RG2hrf3y/background-remove-ghoti-market.png" alt="Ghoti Market Logo" class="app-logo">
+            <img src="https://ghotimarket.com/logo.png" alt="Ghoti Market Logo" class="app-logo">
             <h2>ঘটি মার্কেট অফিশিয়াল অ্যাপ</h2>
             <p>আমাদের অ্যাপটি ব্যবহার করে কেনাকাটা করুন আরও সহজ ও দ্রুত!</p>
 
             <div class="screenshot-container">
-                <img src="https://i.ibb.co.com/p62RyRkd/Screenshot-20260626-095149.png" alt="Screen 1">
-                <img src="https://i.ibb.co.com/MDffFR81/Screenshot-20260626-082619-1.jpg" alt="Screen 2">
-                <img src="https://i.ibb.co.com/RGK2Z9k7/Screenshot-20260626-095552.png" alt="Screen 3">
-                <img src="https://i.ibb.co.com/tP4f4G9F/Screenshot-20260626-095212.png" alt="Screen 4">
-                <img src="https://i.ibb.co.com/zHfTY2b3/Screenshot-20260626-095225.png" alt="Screen 5">
-                <img src="https://i.ibb.co.com/Xr6CNrb7/Screenshot-20260626-095157.png" alt="Screen 6">
-                <img src="https://i.ibb.co.com/Lhg3D3cZ/file-000000003c347207a622bc5242c99b23.png" alt="Screen 7">
+                <img src="https://app.ghotimarket.com/20260725_085916.jpg" alt="Screen 1">
+                <img src="https://app.ghotimarket.com/20260725_085948.jpg" alt="Screen 2">
+                <img src="https://app.ghotimarket.com/20260725_090016.jpg" alt="Screen 3">
+                <img src="https://app.ghotimarket.com/20260725_090304.jpg" alt="Screen 4">
+                <img src="https://app.ghotimarket.com/20260725_090039.jpg" alt="Screen 5">
             </div>
 
             <div class="features">
@@ -70,7 +72,7 @@
                 <p><i class="fas fa-check-circle" style="color: #25D366;"></i> সেলারদের সাথে কথা বলে পণ্য কেনার সুযোগ</p>
             </div>
             
-          <a href="https://apk.e-droid.net/apk/app4096504-mnxowk.apk?v=7" class="download-btn">
+          <a href="https://github.com/nazrulislam887441234-hash/Ghoti-market/releases/download/2.0.0/GHOTI-MARKET.apk" class="download-btn">
     <i class="fas fa-download"></i> অ্যাপ ডাউনলোড করুন
 </a>
 
@@ -109,5 +111,30 @@
             </div>
         </div>
     </div>
+<script>
+const slider = document.querySelector(".screenshot-container");
+const slides = slider.querySelectorAll("img");
+
+let current = 0;
+
+function autoSlide() {
+    current = (current + 1) % slides.length;
+
+    slider.scrollTo({
+        left: slides[current].offsetLeft,
+        behavior: "smooth"
+    });
+}
+
+let interval = setInterval(autoSlide, 2000);
+
+slider.addEventListener("touchstart", () => {
+    clearInterval(interval);
+});
+
+slider.addEventListener("touchend", () => {
+    interval = setInterval(autoSlide, 2000);
+});
+</script>
 </body>
 </html>
