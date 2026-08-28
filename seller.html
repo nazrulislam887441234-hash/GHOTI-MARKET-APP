@@ -1,116 +1,1435 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="bn" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghoti Market Seller APP</title>
-    <meta name="description" content="ঘটি মার্কেট সেলার অ্যাপ ডাউনলোড করুন। এবং আপনার একাউন্ট লগিন করে দ্রুত কাজ করুন!">
-    <meta name="keywords" content="Ghoti Market, ঘটি মার্কেট, অনলাইন শপিং , অ্যাপ ডাউনলোড, Ghoti Market App, ঘটি মার্কেট সেলার অ্যাপ, ghoti market seller, Ghoti market seller app">
-    <link rel="icon" type="image/png" href="https://www.ghotimarket.com/logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>GHOTI MARKET Seller App | Official Android App</title>
+    <meta name="description" content="GHOTI MARKET Seller App ডাউনলোড করুন এবং আপনার Seller Account, পণ্য ও Shop সহজেই পরিচালনা করুন।">
+    <meta name="keywords" content="Ghoti Market, ঘটি মার্কেট, Seller App, Ghoti Market Seller App, Android APK">
+    <meta name="theme-color" content="#FF6B35">
+    <link rel="canonical" href="https://app.ghotimarket.com/seller">
     
+    <meta property="og:title" content="GHOTI MARKET Seller App | Official Android App">
+    <meta property="og:description" content="GHOTI MARKET Seller App ডাউনলোড করুন এবং আপনার Seller Account, পণ্য ও Shop সহজেই পরিচালনা করুন।">
+    <meta property="og:image" content="https://i.ibb.co.com/rKfKNXdW/1811-Photoroom-1.png">
+    <meta property="og:url" content="https://app.ghotimarket.com/seller">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" href="https://i.ibb.co.com/rKfKNXdW/1811-Photoroom-1.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Hind Siliguri', sans-serif; background: #f4f7f6; color: #333; line-height: 1.6; }
-        .main-wrapper { max-width: 600px; margin: 40px auto; padding: 20px; }
-        .app-card { background: #ffffff; padding: 40px; border-radius: 25px; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-        .app-logo { width: 120px; height: 120px; border-radius: 25px; margin-bottom: 20px; object-fit: cover; box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
-        h2 { color: #1a2a3a; margin-bottom: 10px; font-size: 24px; }
-        
-        .screenshot-container { display: flex; overflow-x: auto; gap: 15px; padding: 20px 0; margin-bottom: 20px; scroll-snap-type: x mandatory; scrollbar-width: none; }
-        .screenshot-container::-webkit-scrollbar { display: none; }
-        .screenshot-container img { width: 180px; height: 320px; border-radius: 20px; object-fit: cover; scroll-snap-align: center; border: 4px solid #f4f7f6; box-shadow: 0 5px 15px rgba(0,0,0,0.1); flex-shrink: 0; }
+        :root {
+            --primary: #FF6B35;
+            --primary-gradient: linear-gradient(135deg, #FF6B35 0%, #FF8A5B 100%);
+            --secondary: #FF8A5B;
+            --dark: #111827;
+            --light-bg: #FFF7F3;
+            --white: #FFFFFF;
+            --gray-text: #4B5563;
+            --border-radius: 20px;
+            --shadow-soft: 0 10px 30px rgba(255, 107, 53, 0.1);
+            --shadow-hover: 0 20px 40px rgba(255, 107, 53, 0.2);
+        }
 
-        .features { text-align: left; margin: 25px 0; background: #f9f9f9; padding: 20px; border-radius: 15px; }
-        .features p { margin-bottom: 10px; font-size: 15px; color: #444; }
-        
-        .download-btn { background: linear-gradient(135deg, #25D366, #128C7E); color: #fff; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 18px; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); }
-        .download-btn:hover { transform: translateY(-3px); }
-        
-        .coming-soon-btn { background: #e0e0e0; color: #888; padding: 12px 30px; border-radius: 50px; display: inline-block; cursor: not-allowed; font-weight: bold; margin-top: 15px; border: 1px solid #ccc; }
-        
-        .action-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 25px; }
-        .btn-small { padding: 12px; border-radius: 10px; text-decoration: none; color: white; font-weight: 600; font-size: 14px; }
-        .btn-web { background: #3498db; }
-        .btn-wa { background: #25D366; }
-        .btn-mail { background: #ea4335; }
-        
-        .social-btns { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
-        .social-link { font-size: 24px; color: #333; transition: 0.3s; }
-        .social-link:hover { transform: scale(1.2); }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-        .troubleshoot { text-align: left; background: #fff5f5; padding: 20px; border-radius: 15px; margin-top: 25px; border-left: 5px solid #e74c3c; font-size: 13px; }
-        .footer-links { margin-top: 25px; font-size: 13px; color: #888; }
-        .footer-links a { color: #666; text-decoration: underline; margin: 0 5px; }
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Toast Notification */
+        #toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--dark);
+            color: var(--white);
+            padding: 14px 24px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 2000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        #toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        #toast i {
+            color: var(--primary);
+            font-size: 20px;
+        }
+
+        /* Sticky Header */
+        header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-box img {
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(255, 107, 53, 0.2);
+        }
+
+        .logo-text h1 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark);
+            line-height: 1.1;
+        }
+
+        .logo-text span {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--primary);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            color: var(--gray-text);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--dark);
+            cursor: pointer;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 75px;
+            left: 0;
+            width: 100%;
+            background: var(--white);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            transform: translateY(-150%);
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+            z-index: 999;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .mobile-menu a {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark);
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 40px auto 80px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--dark);
+            line-height: 1.25;
+            margin-bottom: 20px;
+        }
+
+        .gradient-text {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--gray-text);
+            margin-bottom: 30px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: var(--white);
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--dark);
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .hero-meta {
+            font-size: 13px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        /* Phone Showcase Mockup */
+        .hero-mockup {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .phone-frame {
+            width: 280px;
+            height: 560px;
+            background: var(--dark);
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            position: relative;
+            border: 4px solid #374151;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            border-radius: 32px;
+            overflow: hidden;
+            background: var(--white);
+        }
+
+        .phone-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .floating-card {
+            position: absolute;
+            background: var(--white);
+            padding: 12px 20px;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            font-size: 14px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: float 4s ease-in-out infinite;
+            z-index: 2;
+        }
+
+        .floating-card i {
+            color: var(--primary);
+            background: rgba(255, 107, 53, 0.1);
+            padding: 8px;
+            border-radius: 10px;
+        }
+
+        .fc-1 { top: 15%; left: -30px; animation-delay: 0s; }
+        .fc-2 { bottom: 20%; right: -30px; animation-delay: 2s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            max-width: 1100px;
+            margin: 0 auto 80px;
+            background: var(--white);
+            padding: 30px 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            align-items: center;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .trust-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--primary);
+            border-radius: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .trust-text h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .trust-text p {
+            font-size: 13px;
+            color: var(--gray-text);
+        }
+
+        /* Section Commons */
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 34px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            font-size: 16px;
+            color: var(--gray-text);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Feature Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 35px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(255, 107, 53, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(255, 107, 53, 0.3);
+        }
+
+        .feature-icon-box {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--primary);
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            margin-bottom: 25px;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover .feature-icon-box {
+            background: var(--primary-gradient);
+            color: var(--white);
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            font-size: 15px;
+            color: var(--gray-text);
+        }
+
+        /* Screenshot Carousel Section */
+        .screenshot-section {
+            background: var(--white);
+            border-radius: 30px;
+            padding: 80px 20px;
+            box-shadow: var(--shadow-soft);
+            margin: 60px auto;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .screenshot-carousel {
+            display: flex;
+            gap: 25px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            padding: 20px 10px;
+            scroll-behavior: smooth;
+        }
+
+        .screenshot-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .screenshot-item {
+            flex: 0 0 240px;
+            height: 480px;
+            scroll-snap-align: center;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 3px solid #f1f5f9;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .screenshot-item:hover {
+            transform: scale(1.03);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.25);
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .carousel-btn {
+            width: 45px;
+            height: 45px;
+            background: var(--white);
+            border: 2px solid #e5e7eb;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: var(--dark);
+            font-size: 16px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .carousel-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        /* Screenshot Modal */
+        #screenshotModal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(17, 24, 39, 0.85);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        #screenshotModal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+        }
+
+        .modal-content img {
+            display: block;
+            max-height: 85vh;
+            max-width: 100%;
+            object-fit: contain;
+            border-radius: 20px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            color: var(--white);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .modal-close:hover {
+            background: var(--primary);
+        }
+
+        /* How to Download Section */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .step-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+            position: relative;
+            border: 1px solid rgba(255, 107, 53, 0.08);
+        }
+
+        .step-number {
+            width: 65px;
+            height: 65px;
+            background: var(--primary-gradient);
+            color: var(--white);
+            font-size: 24px;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 25px;
+            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .step-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .step-card p {
+            font-size: 15px;
+            color: var(--gray-text);
+        }
+
+        /* Large CTA Section */
+        .cta-banner {
+            background: var(--primary-gradient);
+            border-radius: 30px;
+            padding: 70px 40px;
+            text-align: center;
+            color: var(--white);
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);
+            margin: 80px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner h2 {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .cta-banner p {
+            font-size: 18px;
+            opacity: 0.95;
+            margin-bottom: 35px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--primary);
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            transition: all 0.3s;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            background: #fdfdfd;
+        }
+
+        .cta-meta {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Shopping App Section */
+        .shopping-section {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 50px;
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 60px auto;
+            border-left: 6px solid #3b82f6;
+        }
+
+        .shopping-content h3 {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .shopping-content p {
+            font-size: 16px;
+            color: var(--gray-text);
+        }
+
+        .btn-blue {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: var(--white);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+            transition: all 0.3s;
+        }
+
+        .btn-blue:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Troubleshooting FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border: 1px solid #f0f0f0;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .faq-question {
+            padding: 22px 25px;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-question i {
+            color: var(--primary);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            padding: 0 25px;
+            color: var(--gray-text);
+            font-size: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 0 25px 25px 25px;
+        }
+
+        /* Contact & Support Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: var(--white);
+            padding: 30px 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(255, 107, 53, 0.08);
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary);
+        }
+
+        .contact-icon {
+            width: 55px;
+            height: 55px;
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            margin: 0 auto 20px;
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover .contact-icon {
+            background: var(--primary-gradient);
+            color: var(--white);
+        }
+
+        .contact-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .contact-card span {
+            font-size: 13px;
+            color: var(--gray-text);
+            word-break: break-all;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 60px 20px 30px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-brand h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .footer-brand p {
+            color: #9ca3af;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links-col h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .footer-links-col ul {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links-col a {
+            color: #9ca3af;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-links-col a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 30px auto 0;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+            .hero-btns {
+                justify-content: center;
+            }
+            .features-grid, .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .trust-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .contact-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .hero h2 {
+                font-size: 32px;
+            }
+            .features-grid, .steps-grid, .trust-bar, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .shopping-section {
+                flex-direction: column;
+                text-align: center;
+                gap: 25px;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <div class="main-wrapper">
-        <div class="app-card">
-            <img src="https://i.ibb.co.com/rKfKNXdW/1811-Photoroom-1.png" alt="Ghoti Market Logo" class="app-logo">
-            <h2>ঘটি মার্কেট সেলার  অফিশিয়াল অ্যাপ</h2>
-            <p>আমাদের অ্যাপটি ব্যবহার করে দ্রুত আপনার সেলার একাউন্ট পরিচালনা করার সুযোগ</p>
+    <div id="toast">
+        <i class="fas fa-download"></i>
+        <div>
+            <strong>ডাউনলোড শুরু হচ্ছে...</strong>
+            <p style="font-size: 12px; color: #9ca3af; margin: 0;">আপনার APK ফাইলটি কিছুক্ষণের মধ্যে ডাউনলোড হবে।</p>
+        </div>
+    </div>
 
-            <div class="screenshot-container">
-                <img src="https://i.ibb.co.com/mCtQsXPw/Screenshot-20260629-155632.png" alt="Screen 1">
-                <img src="https://i.ibb.co.com/ks75QDVP/Screenshot-20260629-155642.png" alt="Screen 2">
-                <img src="https://i.ibb.co.com/MD7CFGGx/Screenshot-20260629-155657.png" alt="Screen 3">
-                <img src="https://i.ibb.co.com/Dfr1QrPY/Screenshot-20260629-155714.png" alt="Screen 4">
-                <img src="https://i.ibb.co.com/TB397K2G/Screenshot-20260629-155722.png" alt="Screen 5">
-                <img src="https://i.ibb.co.com/Lhg3D3cZ/file-000000003c347207a622bc5242c99b23.png" alt="Screen 6">
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo-box">
+                <img src="https://i.ibb.co.com/rKfKNXdW/1811-Photoroom-1.png" alt="Ghoti Market Logo">
+                <div class="logo-text">
+                    <h1>GHOTI MARKET</h1>
+                    <span>SELLER APP</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="#home">হোম</a>
+                <a href="#features">ফিচার</a>
+                <a href="#screenshots">স্ক্রিনশট</a>
+                <a href="#download" style="color: var(--primary);">ডাউনলোড</a>
+            </nav>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" class="mobile-nav-link">হোম</a>
+            <a href="#features" class="mobile-nav-link">ফিচার</a>
+            <a href="#screenshots" class="mobile-nav-link">স্ক্রিনশট</a>
+            <a href="#download" class="mobile-nav-link">ডাউনলোড</a>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="badge">
+                <i class="fas fa-shield-alt"></i> OFFICIAL SELLER APP
             </div>
-
-            <div class="features">
-                <p><i class="fas fa-check-circle" style="color: #25D366;"></i>একাউন্ট লগিন করে পণ্য আপলোড।</p>
-                <p><i class="fas fa-check-circle" style="color: #25D366;"></i>সহজে ব্যাবহার করার সুবিধা</p>
-                <p><i class="fas fa-check-circle" style="color: #25D366;"></i> শপের লগো ব্যানার থিম সেট করার সুবিধা</p>
-                <p><i class="fas fa-check-circle" style="color: #25D366;"></i> পাসওয়ার্ড চ্যাঞ্জ, লগো  বা ব্যানার চ্যাঞ্জ করার সুবিধা</p>
+            <h2>আপনার <span class="gradient-text">Seller Account</span> এখন আরও সহজে পরিচালনা করুন</h2>
+            <p>GHOTI MARKET Seller App ব্যবহার করে আপনার সেলার অ্যাকাউন্ট, পণ্য এবং শপ সহজেই পরিচালনা করুন।</p>
+            <div class="hero-btns">
+                <a href="https://github.com/nazrulislam887441234-hash/Seller-ghotimarket/releases/download/v1.9.9/GHOTI-MARKET-SELLER.apk" class="btn-primary download-trigger" aria-label="Download Seller APK">
+                    <i class="fas fa-download"></i> অ্যাপ ডাউনলোড করুন
+                </a>
+                <a href="https://ghotimarket.com" target="_blank" class="btn-secondary" aria-label="Use Web App">
+                    <i class="fas fa-globe"></i> ওয়েব অ্যাপ ব্যবহার করুন
+                </a>
             </div>
-         <a href="https://github.com/nazrulislam887441234-hash/Seller-ghotimarket/releases/download/v1.9.9/GHOTI-MARKET-SELLER.apk" class="download-btn">
-    <i class="fas fa-download"></i> অ্যাপ ডাউনলোড করুন
-</a>
-
-<div style="margin-top:15px;">
-    <a href="https://app.ghotimarket.com"
-       class="download-btn"
-       style="background:linear-gradient(135deg,#3498db,#2980b9);box-shadow:0 5px 15px rgba(52,152,219,.4);padding:15px 30px;font-size:16px;">
-        <i class="fas fa-shopping-cart"></i> কেনাকাটার অ্যাপ ডাউনলোড করুন
-    </a>
-</div>
-
-<div>
-    <span class="coming-soon-btn">
-        <i class="fas fa-clock"></i> Coming Soon to Play Store
-    </span>
-</div>
- 
-
-            <div class="action-btns">
-                <a href="https://ghotimarket.com" class="btn-small btn-web"><i class="fas fa-globe"></i> ওয়েবসাইট</a>
-                <a href="https://wa.me/8801727003670" class="btn-small btn-wa"><i class="fab fa-whatsapp"></i> হোয়াটসঅ্যাপ</a>
-                <a href="mailto:support@ghotimarket.com" class="btn-small btn-mail" style="grid-column: span 2;"><i class="fas fa-envelope"></i> ইমেইল করুন</a>
+            <div class="hero-meta">
+                <span>Android APK • v1.9.9 • 33.01 MB</span>
             </div>
-
-            <div class="social-btns">
-                <a href="https://www.facebook.com/ghotimarket" class="social-link" style="color: #1877f2;"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.youtube.com/@GhotiMarket" class="social-link" style="color: #ff0000;"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="hero-mockup">
+            <div class="floating-card fc-1">
+                <i class="fas fa-chart-line"></i>
+                <span>Seller Dashboard</span>
             </div>
-
-            <div class="troubleshoot">
-                <h4><i class="fas fa-exclamation-triangle"></i> ডাউনলোড সমস্যা?</h4>
-                <ul style="padding-left: 20px;">
-                    <li>Settings > Security থেকে "Install from Unknown Sources" চালু করুন।</li>
-                    <li>Download ফোল্ডার থেকে APK ফাইলটিতে ক্লিক করে Install চাপুন।</li>
-                </ul>
+            <div class="floating-card fc-2">
+                <i class="fas fa-box-open"></i>
+                <span>Product Management</span>
             </div>
+            <div class="phone-frame">
+                <div class="phone-screen">
+                    <img src="https://app.ghotimarket.com/screenshot1.png" alt="Ghoti Market Seller App Screenshot" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="footer-links">
-                <p>ভার্সন: v1.9.9 | সাইজ: ৩৩.০১ মেগাবাইট</p>
-                <a href="https://www.ghotimarket.com/privacy-policy.html">গোপনীয়তা নীতি</a> | <a href="https://www.ghotimarket.com/termsandcondition.html">ব্যবহারের শর্তাবলী</a>
+    <div class="trust-bar">
+        <div class="trust-item">
+            <div class="trust-icon">
+                <i class="fas fa-certificate"></i>
+            </div>
+            <div class="trust-text">
+                <h4>Official App</h4>
+                <p>100% নিরাপদ ও ভেরিফাইড</p>
+            </div>
+        </div>
+        <div class="trust-item">
+            <div class="trust-icon">
+                <i class="fas fa-bolt"></i>
+            </div>
+            <div class="trust-text">
+                <h4>Easy to Use</h4>
+                <p>সহজ ও দ্রুত ইন্টারফেস</p>
+            </div>
+        </div>
+        <div class="trust-item">
+            <div class="trust-icon">
+                <i class="fas fa-lock"></i>
+            </div>
+            <div class="trust-text">
+                <h4>Fast & Secure</h4>
+                <p>নিরাপদ ডাটা প্রটেকশন</p>
+            </div>
+        </div>
+        <div class="trust-item">
+            <div class="trust-icon">
+                <i class="fas fa-store"></i>
+            </div>
+            <div class="trust-text">
+                <h4>Bangladeshi E-commerce</h4>
+                <p>দেশের নাম্বার ওয়ান প্ল্যাটফর্ম</p>
             </div>
         </div>
     </div>
+
+    <section id="features">
+        <div class="section-header">
+            <h2>Seller App-এর শক্তিশালী ফিচার</h2>
+            <p>আপনার শপ পরিচালনার প্রয়োজনীয় গুরুত্বপূর্ণ ফিচারগুলো এখন এক জায়গায়।</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon-box">
+                    <i class="fas fa-user-check"></i>
+                </div>
+                <h3>সহজ Account Login</h3>
+                <p>আপনার Seller Account-এ দ্রুত ও সহজে লগইন করুন।</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-box">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <h3>পণ্য Upload</h3>
+                <p>সহজেই আপনার শপে নতুন পণ্য আপলোড ও পরিচালনা করুন।</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-box">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Shop Customization</h3>
+                <p>আপনার শপের Logo, Banner এবং Theme নিজের মতো করে সেট করুন।</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-box">
+                    <i class="fas fa-key"></i>
+                </div>
+                <h3>Password পরিবর্তন</h3>
+                <p>প্রয়োজনে সহজেই আপনার Account Password পরিবর্তন করুন।</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-box">
+                    <i class="fas fa-images"></i>
+                </div>
+                <h3>Logo & Banner পরিবর্তন</h3>
+                <p>আপনার শপের Branding দ্রুত আপডেট করুন।</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-box">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Mobile Friendly</h3>
+                <p>মোবাইল ডিভাইসে দ্রুত ও সহজ ব্যবহারের জন্য তৈরি।</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots">
+        <div class="screenshot-section">
+            <div class="section-header" style="margin-bottom: 30px;">
+                <h2>অ্যাপটি এক নজরে দেখুন</h2>
+                <p>GHOTI MARKET Seller App-এর গুরুত্বপূর্ণ স্ক্রিনগুলো দেখুন। বড় করে দেখতে যেকোনো স্ক্রিনশটে ক্লিক করুন।</p>
+            </div>
+            <div class="carousel-wrapper">
+                <div class="screenshot-carousel" id="screenshotCarousel">
+                    <div class="screenshot-item" onclick="openModal(this.querySelector('img').src)">
+                        <img src="https://app.ghotimarket.com/screenshot1.png" alt="Screenshot 1" loading="lazy" decoding="async">
+                    </div>
+                    <div class="screenshot-item" onclick="openModal(this.querySelector('img').src)">
+                        <img src="https://app.ghotimarket.com/screenshot2.png" alt="Screenshot 2" loading="lazy" decoding="async">
+                    </div>
+                    <div class="screenshot-item" onclick="openModal(this.querySelector('img').src)">
+                        <img src="https://app.ghotimarket.com/screenshot3.png" alt="Screenshot 3" loading="lazy" decoding="async">
+                    </div>
+                    <div class="screenshot-item" onclick="openModal(this.querySelector('img').src)">
+                        <img src="https://app.ghotimarket.com/screenshot4.jpg" alt="Screenshot 4" loading="lazy" decoding="async">
+                    </div>
+                    <div class="screenshot-item" onclick="openModal(this.querySelector('img').src)">
+                        <img src="https://app.ghotimarket.com/screenshot5.jpg" alt="Screenshot 5" loading="lazy" decoding="async">
+                    </div>
+                    <div class="screenshot-item" onclick="openModal(this.querySelector('img').src)">
+                        <img src="https://i.ibb.co.com/Lhg3D3cZ/file-000000003c347207a622bc5242c99b23.png" alt="Screenshot 6" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div class="carousel-btns">
+                    <button class="carousel-btn" id="prevBtn" aria-label="Previous screenshot"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn" id="nextBtn" aria-label="Next screenshot"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="screenshotModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()" aria-label="Close modal"><i class="fas fa-times"></i></button>
+            <img id="modalImg" src="" alt="Enlarged Screenshot">
+        </div>
+    </div>
+
+    <section>
+        <div class="section-header">
+            <h2>মাত্র কয়েকটি ধাপে অ্যাপ ইনস্টল করুন</h2>
+            <p>খুব সহজেই আপনার অ্যান্ড্রয়েড ডিভাইসে ইনস্টল করুন ঘটি মার্কেট সেলার অ্যাপ।</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">০১</div>
+                <h3>Download</h3>
+                <p>Download button-এ ক্লিক করে APK ফাইল ডাউনলোড করুন।</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">০২</div>
+                <h3>Open APK</h3>
+                <p>Download সম্পন্ন হলে APK ফাইলটি ওপেন করুন।</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">০৩</div>
+                <h3>Install</h3>
+                <p>Install চাপুন এবং Seller App ব্যবহার শুরু করুন।</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="download">
+        <div class="cta-banner">
+            <h2>আজই GHOTI MARKET Seller App ব্যবহার শুরু করুন</h2>
+            <p>আপনার Seller Account পরিচালনা করুন আরও দ্রুত, সহজ ও স্মার্টভাবে।</p>
+            <a href="https://github.com/nazrulislam887441234-hash/Seller-ghotimarket/releases/download/v1.9.9/GHOTI-MARKET-SELLER.apk" class="btn-white download-trigger" aria-label="Download APK from CTA">
+                <i class="fas fa-download"></i> অ্যাপ ডাউনলোড করুন
+            </a>
+            <div class="cta-meta">
+                Version 1.9.9 • 33.01 MB • Android APK
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="shopping-section">
+            <div class="shopping-content">
+                <h3>আপনি কি Shopping App খুঁজছেন?</h3>
+                <p>GHOTI MARKET-এর Shopping App ব্যবহার করে পণ্য ব্রাউজ ও অনলাইনে কেনাকাটা করুন।</p>
+            </div>
+            <a href="https://app.ghotimarket.com" target="_blank" class="btn-blue" aria-label="Shopping App link">
+                <i class="fas fa-shopping-bag"></i> কেনাকাটার অ্যাপ ব্যবহার করুন
+            </a>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-header">
+            <h2>অ্যাপ ইনস্টল করতে সমস্যা হচ্ছে?</h2>
+            <p>সাধারণ কিছু প্রশ্নের উত্তর জেনে সমাধান করুন।</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>APK Install হচ্ছে না কেন?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Android Security Settings-এর কারণে কিছু ডিভাইসে APK install করার অনুমতি প্রয়োজন হতে পারে। প্রয়োজন হলে আপনার ডিভাইসের অনুমোদিত APK installation settings পরীক্ষা করুন।
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>অ্যাপটি কোন ডিভাইসে ব্যবহার করা যাবে?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Android ডিভাইসে Seller App ব্যবহার করা যাবে।
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Play Store-এ অ্যাপটি পাওয়া যাবে?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Play Store version বর্তমানে Coming Soon।
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-header">
+            <h2>যোগাযোগ ও সাপোর্ট</h2>
+            <p>যেকোনো প্রয়োজনে আমাদের সাথে যোগাযোগ করুন।</p>
+        </div>
+        <div class="contact-grid">
+            <a href="https://ghotimarket.com" target="_blank" class="contact-card">
+                <div class="contact-icon"><i class="fas fa-globe"></i></div>
+                <h4>ওয়েবসাইট</h4>
+                <span>ghotimarket.com</span>
+            </a>
+            <a href="https://wa.me/8801727003670" target="_blank" class="contact-card">
+                <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                <h4>হোয়াটসঅ্যাপ</h4>
+                <span>+8801727003670</span>
+            </a>
+            <a href="mailto:support@ghotimarket.com" class="contact-card">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <h4>ইমেইল</h4>
+                <span>support@ghotimarket.com</span>
+            </a>
+            <a href="https://www.facebook.com/ghotimarketofficial" target="_blank" class="contact-card">
+                <div class="contact-icon"><i class="fab fa-facebook-f"></i></div>
+                <h4>ফেসবুক</h4>
+                <span>/ghotimarket</span>
+            </a>
+            <a href="https://www.youtube.com/@GhotiMarket" target="_blank" class="contact-card">
+                <div class="contact-icon"><i class="fab fa-youtube"></i></div>
+                <h4>ইউটিউব</h4>
+                <span>@GhotiMarket</span>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>GHOTI MARKET</h3>
+                <p>বাংলাদেশের No.1 ই-কমার্স সেলার প্লাটফর্ম। আপনার ব্যবসার ডিজিটালাইজেশনে আমরা সর্বদা পাশে আছি।</p>
+            </div>
+            <div class="footer-links-col">
+                <h4>গুরুত্বপূর্ণ লিংক</h4>
+                <ul>
+                    <li><a href="https://ghotimarket.com" target="_blank">Website</a></li>
+                    <li><a href="https://www.ghotimarket.com/privacy-policy.html" target="_blank">Privacy Policy</a></li>
+                    <li><a href="https://www.ghotimarket.com/termsandcondition.html" target="_blank">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-col">
+                <h4>সাপোর্ট</h4>
+                <ul>
+                    <li><a href="mailto:support@ghotimarket.com">Email Support</a></li>
+                    <li><a href="https://wa.me/8801727003670" target="_blank">WhatsApp Chat</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 GHOTI MARKET. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const icon = hamburgerBtn.querySelector('i');
+            if(mobileMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                hamburgerBtn.querySelector('i').classList.remove('fa-times');
+                hamburgerBtn.querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Download Toast Notification
+        const downloadTriggers = document.querySelectorAll('.download-trigger');
+        const toast = document.getElementById('toast');
+
+        downloadTriggers.forEach(btn => {
+            btn.addEventListener('click', () => {
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 4000);
+            });
+        });
+
+        // Screenshot Carousel Scroll Buttons
+        const carousel = document.getElementById('screenshotCarousel');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        if(prevBtn && nextBtn && carousel) {
+            prevBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: -260, behavior: 'smooth' });
+            });
+            nextBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: 260, behavior: 'smooth' });
+            });
+        }
+
+        // Screenshot Modal Preview
+        const modal = document.getElementById('screenshotModal');
+        const modalImg = document.getElementById('modalImg');
+
+        function openModal(src) {
+            modalImg.src = src;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
