@@ -1,0 +1,1884 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FF6B35">
+  <meta name="color-scheme" content="light">
+
+  <title>Account Deletion | GHOTI MARKET</title>
+
+  <meta name="description" content="GHOTI MARKET Buyer, Seller, Reseller, Affiliate এবং Landing Account ডিলিট করার নিয়ম, ব্যক্তিগত ডেটা মুছে ফেলার অনুরোধ এবং অফিসিয়াল সাপোর্ট যোগাযোগ।">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ghotimarket.com/account-deletion">
+
+  <link rel="icon" type="image/png"
+    href="https://ghotimarket.com/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #FF6B35;
+      --primary-dark: #E95420;
+      --primary-light: #FFF1E9;
+      --orange-soft: #FFF8F3;
+      --dark: #191919;
+      --text: #393939;
+      --muted: #777777;
+      --border: #ECECEC;
+      --surface: #FFFFFF;
+      --background: #FAFAF9;
+      --green: #168653;
+      --green-soft: #EAF8F0;
+      --shadow: 0 12px 40px rgba(30, 20, 12, .055);
+      --shadow-hover: 0 18px 42px rgba(255, 107, 53, .11);
+      --radius: 20px;
+      --max-width: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: "Hind Siliguri", sans-serif;
+      color: var(--dark);
+      background: var(--background);
+      line-height: 1.8;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body, button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input {
+      font: inherit;
+    }
+
+    img, svg {
+      display: block;
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .icon {
+      width: 23px;
+      height: 23px;
+      flex: 0 0 auto;
+    }
+
+    .icon-sm {
+      width: 17px;
+      height: 17px;
+    }
+
+    .icon-lg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .top-progress {
+      height: 4px;
+      background: linear-gradient(
+        90deg,
+        #FF6B35,
+        #FFA500,
+        #FF8B4A,
+        #FF6B35
+      );
+      background-size: 250% 100%;
+      animation: gradientMove 6s linear infinite;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, .94);
+      border-bottom: 1px solid rgba(0, 0, 0, .055);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      width: min(100% - 40px, var(--max-width));
+      min-height: 78px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-family: Inter, sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -.65px;
+      line-height: 1.4;
+    }
+
+    .brand-caption {
+      display: block;
+      margin-top: 3px;
+      color: #777;
+      font-size: 9px;
+      letter-spacing: 1.3px;
+      font-weight: 600;
+    }
+
+    .nav-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 11px 17px;
+      border: 1px solid #FFD5C4;
+      border-radius: 13px;
+      color: var(--primary-dark);
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: background .25s, transform .25s;
+    }
+
+    .nav-action:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: 76px 20px 92px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 5% 15%, #FFB78333, transparent 35%),
+        radial-gradient(ellipse at 96% 90%, #FF9C4930, transparent 34%),
+        linear-gradient(135deg, #FFF1E9 0%, #FFFAF6 50%, #FFF1DC 100%);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 340px;
+      height: 340px;
+      border: 1px solid #FF8C3530;
+      top: -190px;
+      left: -110px;
+      animation: float 9s ease-in-out infinite;
+    }
+
+    .hero::after {
+      width: 280px;
+      height: 280px;
+      border: 1px solid #FF8C3530;
+      right: -90px;
+      bottom: -170px;
+      animation: float 9s ease-in-out infinite reverse;
+    }
+
+    .hero-inner {
+      max-width: 810px;
+      margin: auto;
+      animation: fadeUp .8s ease both;
+    }
+
+    .official-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 15px;
+      border: 1px solid #F5D7C8;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, .8);
+      color: #A54A26;
+      font-family: Inter, "Hind Siliguri", sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      margin-bottom: 25px;
+    }
+
+    .official-label .icon {
+      color: var(--green);
+      width: 17px;
+      height: 17px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5.4vw, 53px);
+      line-height: 1.32;
+      font-weight: 700;
+      letter-spacing: -.6px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--primary-dark);
+    }
+
+    .hero-description {
+      max-width: 665px;
+      margin: auto;
+      color: #65605C;
+      font-size: 17px;
+      line-height: 1.95;
+    }
+
+    .date-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 11px 17px;
+      margin-top: 27px;
+      background: rgba(255, 255, 255, .82);
+      border: 1px solid #F0D9CB;
+      border-radius: 13px;
+      color: #51463F;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .date-chip .icon {
+      color: var(--primary-dark);
+    }
+
+    .date-chip time {
+      font-weight: 700;
+    }
+
+    .main-container {
+      width: min(100% - 40px, var(--max-width));
+      margin: -32px auto 75px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .intro-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 19px;
+      padding: 30px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 23px;
+      box-shadow: var(--shadow);
+      animation: fadeUp .8s .12s ease both;
+    }
+
+    .intro-symbol {
+      display: grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      flex-shrink: 0;
+      color: var(--primary-dark);
+      background: var(--primary-light);
+      border: 1px solid #FFE1D3;
+      border-radius: 16px;
+    }
+
+    .intro-card h2 {
+      font-size: 22px;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .intro-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .section {
+      margin-top: 52px;
+    }
+
+    .section-heading {
+      margin-bottom: 24px;
+    }
+
+    .section-tag {
+      color: var(--primary-dark);
+      font: 800 10px Inter, sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 9px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(25px, 4vw, 32px);
+      line-height: 1.45;
+      margin-bottom: 8px;
+    }
+
+    .section-description {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 720px;
+    }
+
+    .account-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 17px;
+    }
+
+    .account-card {
+      padding: 25px 23px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: white;
+      transition: transform .28s ease, border-color .28s ease,
+        box-shadow .28s ease;
+    }
+
+    .account-card:hover {
+      transform: translateY(-5px);
+      border-color: #FFD0BB;
+      box-shadow: var(--shadow-hover);
+    }
+
+    .account-icon {
+      width: 49px;
+      height: 49px;
+      display: grid;
+      place-items: center;
+      color: var(--primary-dark);
+      background: linear-gradient(135deg, #FFF0E7, #FFF8F2);
+      border: 1px solid #FFE0D0;
+      border-radius: 15px;
+      margin-bottom: 17px;
+    }
+
+    .account-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .account-card p {
+      font-size: 14px;
+      line-height: 1.85;
+      color: var(--muted);
+    }
+
+    .policy-list {
+      display: grid;
+      gap: 15px;
+    }
+
+    .policy-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 23px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: white;
+      transition: border-color .25s, transform .25s;
+    }
+
+    .policy-item:hover {
+      border-color: #FFD4C2;
+      transform: translateX(3px);
+    }
+
+    .policy-number {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+      border-radius: 13px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font: 800 13px Inter, sans-serif;
+    }
+
+    .policy-item h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .policy-item p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    .warning-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-top: 20px;
+      padding: 24px;
+      border: 1px solid #F2D9AB;
+      border-radius: 18px;
+      background: #FFF9EC;
+    }
+
+    .warning-icon {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      flex-shrink: 0;
+      color: #99620C;
+      background: #FFF0CD;
+      border-radius: 13px;
+    }
+
+    .warning-card h3 {
+      color: #84500B;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .warning-card p {
+      color: #775F3F;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .request-card {
+      padding: 27px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+    }
+
+    .request-card h3 {
+      font-size: 20px;
+      margin-bottom: 14px;
+    }
+
+    .request-list {
+      display: grid;
+      gap: 13px;
+      list-style: none;
+    }
+
+    .request-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .request-list .icon {
+      width: 19px;
+      height: 19px;
+      margin-top: 5px;
+      flex-shrink: 0;
+      color: var(--green);
+    }
+
+    .privacy-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 20px;
+      padding-top: 17px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .privacy-note .icon {
+      color: var(--primary-dark);
+      width: 19px;
+      height: 19px;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+
+    .contact-panel {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      margin-top: 54px;
+      padding: 43px;
+      border-radius: 27px;
+      background: linear-gradient(130deg, #1C1B1A 0%, #29221E 65%, #382319 100%);
+      color: white;
+      box-shadow: 0 22px 55px rgba(32, 21, 14, .13);
+    }
+
+    .contact-panel::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 350px;
+      height: 350px;
+      right: -130px;
+      top: -175px;
+      border-radius: 50%;
+      border: 55px solid rgba(255, 107, 53, .10);
+    }
+
+    .contact-panel::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 210px;
+      height: 210px;
+      right: 130px;
+      bottom: -160px;
+      border-radius: 50%;
+      background: rgba(255, 107, 53, .09);
+    }
+
+    .contact-content {
+      max-width: 710px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #FFB08C;
+      font: 800 10px Inter, sans-serif;
+      letter-spacing: 1.9px;
+      margin-bottom: 15px;
+    }
+
+    .contact-tag .icon {
+      width: 17px;
+      height: 17px;
+    }
+
+    .contact-panel h2 {
+      font-size: clamp(27px, 4.4vw, 38px);
+      line-height: 1.45;
+      margin-bottom: 12px;
+    }
+
+    .contact-description {
+      max-width: 610px;
+      color: #D2CAC5;
+      font-size: 15px;
+      line-height: 1.9;
+      margin-bottom: 27px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 13px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      min-width: 0;
+      padding: 17px;
+      background: white;
+      border: 1px solid transparent;
+      border-radius: 16px;
+      color: var(--dark);
+      transition: transform .25s, border-color .25s,
+        background .25s;
+    }
+
+    .contact-link:hover {
+      transform: translateY(-3px);
+      border-color: #FFCBB4;
+      background: #FFFAF6;
+    }
+
+    .contact-link.email-link {
+      grid-column: 1 / -1;
+    }
+
+    .contact-icon {
+      display: grid;
+      place-items: center;
+      width: 45px;
+      height: 45px;
+      flex-shrink: 0;
+      border-radius: 14px;
+      background: var(--green-soft);
+      color: var(--green);
+    }
+
+    .email-link .contact-icon {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+    }
+
+    .contact-text {
+      min-width: 0;
+    }
+
+    .contact-text small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.6;
+      margin-bottom: 2px;
+    }
+
+    .contact-text strong {
+      display: block;
+      font-family: Inter, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+      line-height: 1.65;
+    }
+
+    .contact-link .arrow {
+      width: 17px;
+      height: 17px;
+      margin-left: auto;
+      flex-shrink: 0;
+      color: #8C8C8C;
+    }
+
+    .contact-disclaimer {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      color: #D0C6C0;
+      font-size: 12px;
+      line-height: 1.9;
+      margin-top: 20px;
+    }
+
+    .contact-disclaimer .icon {
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+      margin-top: 4px;
+      color: #FFB08C;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+
+    .faq-item[open] {
+      border-color: #FFD3C1;
+    }
+
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 19px 21px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      display: grid;
+      place-items: center;
+      width: 29px;
+      height: 29px;
+      flex-shrink: 0;
+      border-radius: 9px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font: 600 21px Inter, sans-serif;
+      transition: transform .2s;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 0 21px 20px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .footer {
+      background: white;
+      border-top: 1px solid var(--border);
+      padding: 32px 20px 25px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      width: 66px;
+      height: 66px;
+      object-fit: contain;
+      margin: 0 auto 10px;
+    }
+
+    .footer-name {
+      font: 800 16px Inter, sans-serif;
+      letter-spacing: -.4px;
+    }
+
+    .footer-name span {
+      color: var(--primary-dark);
+    }
+
+    .footer-description {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      margin: 19px auto;
+    }
+
+    .footer-links a {
+      color: #575757;
+      font-size: 13px;
+      transition: color .2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-dark);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 17px;
+      margin-top: 20px;
+      color: #888;
+      font: 11px Inter, sans-serif;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid #FF9A70;
+      outline-offset: 4px;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(18px, -15px);
+      }
+    }
+
+    @keyframes gradientMove {
+      to {
+        background-position: 250% 0;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .account-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-panel {
+        padding: 32px 26px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .nav {
+        width: calc(100% - 28px);
+        min-height: 69px;
+        gap: 8px;
+      }
+
+      .brand {
+        gap: 8px;
+      }
+
+      .brand-logo {
+        width: 43px;
+        height: 43px;
+      }
+
+      .brand-name {
+        font-size: 14px;
+      }
+
+      .brand-caption {
+        font-size: 8px;
+        letter-spacing: .65px;
+      }
+
+      .nav-action {
+        padding: 9px 10px;
+        gap: 5px;
+        font-size: 12px;
+      }
+
+      .nav-action .icon {
+        width: 16px;
+        height: 16px;
+      }
+
+      .hero {
+        padding: 55px 19px 72px;
+      }
+
+      .official-label {
+        font-size: 9px;
+        padding: 8px 12px;
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .date-chip {
+        font-size: 12px;
+        padding: 9px 12px;
+      }
+
+      .main-container {
+        width: calc(100% - 28px);
+        margin-bottom: 50px;
+      }
+
+      .intro-card {
+        padding: 21px 17px;
+        gap: 13px;
+        border-radius: 19px;
+      }
+
+      .intro-symbol {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+      }
+
+      .intro-card h2 {
+        font-size: 18px;
+      }
+
+      .intro-card p,
+      .section-description {
+        font-size: 13px;
+      }
+
+      .section {
+        margin-top: 39px;
+      }
+
+      .section-heading {
+        margin-bottom: 18px;
+      }
+
+      .section-heading h2 {
+        font-size: 25px;
+      }
+
+      .account-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .account-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 19px;
+      }
+
+      .account-icon {
+        width: 43px;
+        height: 43px;
+        margin: 0;
+      }
+
+      .account-card h3 {
+        font-size: 16px;
+        margin-bottom: 4px;
+      }
+
+      .account-card p {
+        font-size: 13px;
+      }
+
+      .policy-item {
+        padding: 18px 15px;
+        gap: 12px;
+      }
+
+      .policy-number {
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+        font-size: 11px;
+      }
+
+      .policy-item h3 {
+        font-size: 16px;
+      }
+
+      .policy-item p,
+      .warning-card p {
+        font-size: 13px;
+      }
+
+      .warning-card {
+        padding: 18px 15px;
+        gap: 12px;
+      }
+
+      .warning-icon {
+        width: 36px;
+        height: 36px;
+      }
+
+      .warning-card h3 {
+        font-size: 16px;
+      }
+
+      .request-card {
+        padding: 20px 16px;
+      }
+
+      .request-card h3 {
+        font-size: 18px;
+      }
+
+      .contact-panel {
+        padding: 27px 17px;
+        border-radius: 21px;
+        margin-top: 40px;
+      }
+
+      .contact-panel h2 {
+        font-size: 28px;
+      }
+
+      .contact-description {
+        font-size: 13px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .contact-link.email-link {
+        grid-column: auto;
+      }
+
+      .contact-link {
+        padding: 14px 12px;
+      }
+
+      .contact-text strong {
+        font-size: 12px;
+      }
+
+      .faq-item summary {
+        padding: 16px;
+        font-size: 14px;
+      }
+
+      .faq-answer {
+        padding: 0 16px 17px;
+        font-size: 13px;
+      }
+
+      .footer-links {
+        gap: 12px 17px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Inline SVG icon library: no emoji icons -->
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="0" height="0"
+       aria-hidden="true"
+       style="position:absolute;overflow:hidden">
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/>
+      <path d="m9 12 2 2 4-4"/>
+    </symbol>
+
+    <symbol id="i-calendar" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="16" rx="2"/>
+      <path d="M16 3v4M8 3v4M3 10h18"/>
+      <path d="m9 15 2 2 4-4"/>
+    </symbol>
+
+    <symbol id="i-info" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M12 11v5M12 8h.01"/>
+    </symbol>
+
+    <symbol id="i-user" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="4"/>
+      <path d="M5 21v-2a7 7 0 0 1 14 0v2"/>
+    </symbol>
+
+    <symbol id="i-store" viewBox="0 0 24 24">
+      <path d="M3 10v11h18V10"/>
+      <path d="M2 10 4 3h16l2 7"/>
+      <path d="M2 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/>
+      <path d="M9 21v-6h6v6"/>
+    </symbol>
+
+    <symbol id="i-box" viewBox="0 0 24 24">
+      <path d="m12 3 9 5-9 5-9-5 9-5Z"/>
+      <path d="m3 8 9 5 9-5"/>
+      <path d="M3 8v9l9 5 9-5V8"/>
+      <path d="M12 13v9"/>
+    </symbol>
+
+    <symbol id="i-handshake" viewBox="0 0 24 24">
+      <path d="m8 12 3 3a2 2 0 0 0 3-3l-3-3"/>
+      <path d="m14 10 2-2 5 5-5 5-2-2"/>
+      <path d="m10 10-2-2-5 5 5 5 2-2"/>
+      <path d="m9 5 3-2 3 2"/>
+      <path d="m5 8 4-3M19 8l-4-3"/>
+    </symbol>
+
+    <symbol id="i-globe" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M2 12h20"/>
+      <path d="M12 2a15 15 0 0 1 0 20"/>
+      <path d="M12 2a15 15 0 0 0 0 20"/>
+    </symbol>
+
+    <symbol id="i-lock" viewBox="0 0 24 24">
+      <rect x="4" y="10" width="16" height="11" rx="2"/>
+      <path d="M8 10V7a4 4 0 1 1 8 0v3"/>
+      <path d="M12 14v3"/>
+    </symbol>
+
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="m8 12 3 3 5-6"/>
+    </symbol>
+
+    <symbol id="i-alert" viewBox="0 0 24 24">
+      <path d="m10.3 3.9-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3.1l-8-14a2 2 0 0 0-3.4 0Z"/>
+      <path d="M12 9v4M12 17h.01"/>
+    </symbol>
+
+    <symbol id="i-message" viewBox="0 0 24 24">
+      <path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"/>
+    </symbol>
+
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2"/>
+      <path d="m3 7 9 6 9-6"/>
+    </symbol>
+
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14M12 5l7 7-7 7"/>
+    </symbol>
+
+    <symbol id="i-external" viewBox="0 0 24 24">
+      <path d="M14 3h7v7"/>
+      <path d="M10 14 21 3"/>
+      <path d="M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"/>
+    </symbol>
+
+    <symbol id="i-file" viewBox="0 0 24 24">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/>
+      <path d="M14 2v6h6M8 13h8M8 17h8"/>
+    </symbol>
+
+    <symbol id="i-headphones" viewBox="0 0 24 24">
+      <path d="M3 14v-3a9 9 0 0 1 18 0v3"/>
+      <rect x="3" y="13" width="4" height="7" rx="2"/>
+      <rect x="17" y="13" width="4" height="7" rx="2"/>
+      <path d="M17 20a5 5 0 0 1-5 2"/>
+    </symbol>
+  </svg>
+
+  <div class="top-progress"></div>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="প্রধান নেভিগেশন">
+
+      <a class="brand" href="https://ghotimarket.com"
+         aria-label="GHOTI MARKET হোমপেজ">
+
+        <img
+          class="brand-logo"
+          src="https://ghotimarket.com/logo.png"
+          alt="GHOTI MARKET Logo"
+          width="54"
+          height="54"
+          fetchpriority="high">
+
+        <span>
+          <span class="brand-name">GHOTI MARKET</span>
+          <span class="brand-caption">YOUR TRUSTED MARKETPLACE</span>
+        </span>
+      </a>
+
+      <a class="nav-action" href="#contact">
+        <svg class="icon" aria-hidden="true">
+          <use href="#i-headphones"/>
+        </svg>
+        <span>সাপোর্টে যোগাযোগ</span>
+      </a>
+
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+
+        <div class="official-label">
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-shield"/>
+          </svg>
+          GHOTI MARKET · ACCOUNT POLICY
+        </div>
+
+        <h1>
+          অ্যাকাউন্ট ডিলিট করার<br>
+          <span>নীতিমালা ও অনুরোধ</span>
+        </h1>
+
+        <p class="hero-description">
+          আপনি আপনার GHOTI MARKET অ্যাকাউন্ট এবং সংশ্লিষ্ট
+          ব্যক্তিগত ডেটা মুছে ফেলার অনুরোধ করতে পারবেন।
+          অনুরোধ জমা দেওয়ার পদ্ধতি, মালিকানা যাচাই এবং
+          ডেটা মুছে ফেলার নীতিমালা এখানে বিস্তারিত দেওয়া হয়েছে।
+        </p>
+
+        <div class="date-chip">
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-calendar"/>
+          </svg>
+          <span>আজকের তারিখ:</span>
+          <time id="today" datetime="">লোড হচ্ছে...</time>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="main-container">
+
+      <section class="intro-card">
+        <div class="intro-symbol">
+          <svg class="icon-lg" aria-hidden="true">
+            <use href="#i-info"/>
+          </svg>
+        </div>
+
+        <div>
+          <h2>আপনার অ্যাকাউন্ট, আপনার সিদ্ধান্ত</h2>
+          <p>
+            GHOTI MARKET-এ অ্যাকাউন্ট ডিলিটের অনুরোধ করার
+            জন্য আপনাকে অ্যাপে লগইন করে থাকতে হবে না।
+            এই পেজের মাধ্যমে সাপোর্ট টিমের সঙ্গে যোগাযোগ
+            করতে পারবেন। আপনার অ্যাকাউন্টের মালিকানা যাচাই
+            করার পর অনুরোধটি প্রক্রিয়া করা হবে।
+          </p>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-heading">
+          <div class="section-tag">ACCOUNT TYPES</div>
+          <h2>সব ধরনের অ্যাকাউন্টের জন্য প্রযোজ্য</h2>
+          <p class="section-description">
+            Buyer, Seller, Reseller, Affiliate এবং Landing
+            Account-এর ডিলিট রিকোয়েস্টের জন্য একই সাপোর্ট
+            প্রক্রিয়া অনুসরণ করা হবে।
+          </p>
+        </div>
+
+        <div class="account-grid">
+
+          <article class="account-card">
+            <div class="account-icon">
+              <svg class="icon-lg" aria-hidden="true">
+                <use href="#i-user"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Buyer Account</h3>
+              <p>
+                ক্রেতার প্রোফাইল ও সংশ্লিষ্ট ব্যক্তিগত ডেটা
+                মুছে ফেলার জন্য অনুরোধ করুন।
+              </p>
+            </div>
+          </article>
+
+          <article class="account-card">
+            <div class="account-icon">
+              <svg class="icon-lg" aria-hidden="true">
+                <use href="#i-store"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Seller Account</h3>
+              <p>
+                সেলার অ্যাকাউন্ট, শপ এবং সংশ্লিষ্ট তথ্যের
+                ডিলিট রিকোয়েস্ট সাপোর্টের মাধ্যমে প্রক্রিয়া হবে।
+              </p>
+            </div>
+          </article>
+
+          <article class="account-card">
+            <div class="account-icon">
+              <svg class="icon-lg" aria-hidden="true">
+                <use href="#i-box"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Reseller Account</h3>
+              <p>
+                রিসেলার অ্যাকাউন্টের মালিকানা যাচাইয়ের পর
+                সংশ্লিষ্ট ডিলিট প্রক্রিয়া শুরু হবে।
+              </p>
+            </div>
+          </article>
+
+          <article class="account-card">
+            <div class="account-icon">
+              <svg class="icon-lg" aria-hidden="true">
+                <use href="#i-handshake"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Affiliate Account</h3>
+              <p>
+                অ্যাফিলিয়েট প্রোফাইল ও সংশ্লিষ্ট ব্যক্তিগত
+                ডেটা মুছে ফেলার অনুরোধ করা যাবে।
+              </p>
+            </div>
+          </article>
+
+          <article class="account-card">
+            <div class="account-icon">
+              <svg class="icon-lg" aria-hidden="true">
+                <use href="#i-globe"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Landing Account</h3>
+              <p>
+                ল্যান্ডিং অ্যাকাউন্ট এবং সংশ্লিষ্ট পেজ ও
+                ব্যক্তিগত ডেটা মুছে ফেলার অনুরোধ করুন।
+              </p>
+            </div>
+          </article>
+
+          <article class="account-card">
+            <div class="account-icon">
+              <svg class="icon-lg" aria-hidden="true">
+                <use href="#i-lock"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Ownership Verification</h3>
+              <p>
+                অননুমোদিত ডিলিট প্রতিরোধ করতে অ্যাকাউন্টের
+                মালিকানা যাচাই করা হবে।
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-heading">
+          <div class="section-tag">DELETION PROCESS</div>
+          <h2>অ্যাকাউন্ট ডিলিট করার প্রক্রিয়া</h2>
+          <p class="section-description">
+            আপনার রিকোয়েস্ট কীভাবে গ্রহণ, যাচাই ও সম্পন্ন
+            করা হবে তার ধাপগুলো নিচে দেওয়া হয়েছে।
+          </p>
+        </div>
+
+        <div class="policy-list">
+
+          <article class="policy-item">
+            <div class="policy-number">01</div>
+            <div>
+              <h3>সাপোর্ট টিমে রিকোয়েস্ট জমা দিন</h3>
+              <p>
+                WhatsApp অথবা support@ghotimarket.com
+                ইমেইলে যোগাযোগ করে স্থায়ীভাবে অ্যাকাউন্ট
+                ও সংশ্লিষ্ট ব্যক্তিগত ডেটা ডিলিট করার অনুরোধ
+                জানান। আপনার অ্যাকাউন্টের ধরন উল্লেখ করুন।
+              </p>
+            </div>
+          </article>
+
+          <article class="policy-item">
+            <div class="policy-number">02</div>
+            <div>
+              <h3>অ্যাকাউন্টের মালিকানা যাচাই</h3>
+              <p>
+                আপনি সংশ্লিষ্ট অ্যাকাউন্টের প্রকৃত মালিক
+                অথবা অনুমোদিত অ্যাডমিন কি না তা যাচাই করা
+                হবে। যাচাইয়ের জন্য প্রয়োজনীয় তথ্য নিরাপদ
+                পদ্ধতিতে নিশ্চিত করতে হবে।
+              </p>
+            </div>
+          </article>
+
+          <article class="policy-item">
+            <div class="policy-number">03</div>
+            <div>
+              <h3>ডিলিটের অনুরোধ প্রক্রিয়াকরণ</h3>
+              <p>
+                মালিকানা যাচাই সম্পন্ন হলে ডিলিটের প্রক্রিয়া
+                শুরু হবে। সাধারণ পরিস্থিতিতে যাচাই সম্পন্ন
+                হওয়ার পর ২–৭ দিনের মধ্যে অনুরোধ সম্পন্ন
+                করার লক্ষ্য রাখা হবে। বিশেষ পরিস্থিতিতে
+                অতিরিক্ত সময় লাগলে আপনাকে জানানো হবে।
+              </p>
+            </div>
+          </article>
+
+          <article class="policy-item">
+            <div class="policy-number">04</div>
+            <div>
+              <h3>অ্যাকাউন্ট ও প্রযোজ্য ডেটা মুছে ফেলা</h3>
+              <p>
+                অনুরোধ সম্পন্ন হলে অ্যাকাউন্ট এবং প্রযোজ্য
+                সংশ্লিষ্ট ব্যক্তিগত ডেটা মুছে ফেলা হবে।
+                আইনগত বা নিয়ন্ত্রক বাধ্যবাধকতায় সংরক্ষণ
+                করতে হয় এমন নির্দিষ্ট রেকর্ড ব্যতিক্রম হতে
+                পারে। সংরক্ষিত ডেটা প্রযোজ্য নীতি অনুযায়ী
+                পরিচালনা করা হবে।
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="warning-card">
+          <div class="warning-icon">
+            <svg class="icon-lg" aria-hidden="true">
+              <use href="#i-alert"/>
+            </svg>
+          </div>
+
+          <div>
+            <h3>স্থায়ীভাবে ডিলিট করার আগে সতর্ক থাকুন</h3>
+            <p>
+              অ্যাকাউন্ট ডিলিট হলে আপনার প্রোফাইল, সংরক্ষিত
+              তথ্য, ল্যান্ডিং পেজ এবং সংশ্লিষ্ট ডেটা হারিয়ে
+              যেতে পারে। মুছে ফেলা তথ্য পুনরুদ্ধার করা
+              সম্ভব নাও হতে পারে। তাই আগে প্রয়োজনীয়
+              তথ্য সংরক্ষণ করুন। বৈধ আইনগত বা নিয়ন্ত্রক
+              কারণে সংরক্ষণযোগ্য রেকর্ড প্রযোজ্য নিয়ম
+              অনুযায়ী রাখা হতে পারে।
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-heading">
+          <div class="section-tag">REQUEST CHECKLIST</div>
+          <h2>রিকোয়েস্ট করার আগে জেনে নিন</h2>
+          <p class="section-description">
+            আপনার অনুরোধ দ্রুত শনাক্ত করার জন্য নিচের
+            তথ্যগুলো প্রস্তুত রাখুন।
+          </p>
+        </div>
+
+        <div class="request-card">
+          <h3>রিকোয়েস্টে যে তথ্যগুলো উল্লেখ করবেন</h3>
+
+          <ul class="request-list">
+            <li>
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-check"/>
+              </svg>
+              <span>
+                অ্যাকাউন্টের ধরন: Buyer, Seller, Reseller,
+                Affiliate অথবা Landing।
+              </span>
+            </li>
+
+            <li>
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-check"/>
+              </svg>
+              <span>
+                অ্যাকাউন্টে ব্যবহৃত ফোন নম্বর অথবা ইমেইল
+                ঠিকানা।
+              </span>
+            </li>
+
+            <li>
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-check"/>
+              </svg>
+              <span>
+                অ্যাকাউন্ট এবং সংশ্লিষ্ট ব্যক্তিগত ডেটা
+                স্থায়ীভাবে মুছে ফেলার স্পষ্ট অনুরোধ।
+              </span>
+            </li>
+
+            <li>
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-check"/>
+              </svg>
+              <span>
+                প্রয়োজন হলে নিরাপদ পদ্ধতিতে অ্যাকাউন্টের
+                মালিকানা যাচাই করার সম্মতি।
+              </span>
+            </li>
+          </ul>
+
+          <div class="privacy-note">
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-lock"/>
+            </svg>
+            <p>
+              আপনার পাসওয়ার্ড, OTP বা গোপন লগইন তথ্য
+              WhatsApp কিংবা ইমেইলে পাঠাবেন না।
+              পরিচয় যাচাইয়ের জন্য সাপোর্ট টিমের
+              অনুমোদিত নিরাপদ পদ্ধতি ব্যবহার করুন।
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-panel reveal" id="contact">
+        <div class="contact-content">
+
+          <div class="contact-tag">
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-headphones"/>
+            </svg>
+            OFFICIAL CUSTOMER SUPPORT
+          </div>
+
+          <h2>
+            অ্যাকাউন্ট ডিলিট করতে<br>
+            সাপোর্ট টিমে কথা বলুন
+          </h2>
+
+          <p class="contact-description">
+            নিচের অফিসিয়াল যোগাযোগ মাধ্যমগুলোর যেকোনো
+            একটি ব্যবহার করে আপনার ডিলিট রিকোয়েস্ট জমা
+            দিন। আমাদের সাপোর্ট টিম মালিকানা যাচাই এবং
+            পরবর্তী প্রক্রিয়া সম্পর্কে আপনাকে নির্দেশনা দেবে।
+          </p>
+
+          <div class="contact-grid">
+
+            <a class="contact-link"
+               href="https://wa.me/8801727003670?text=Assalamu%20Alaikum%2C%20ami%20GHOTI%20MARKET%20account%20deletion%20request%20korte%20chai.%0AAccount%20type%3A%20"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="01727003670 নম্বরে WhatsApp করুন">
+
+              <span class="contact-icon">
+                <svg class="icon-lg" aria-hidden="true">
+                  <use href="#i-message"/>
+                </svg>
+              </span>
+
+              <span class="contact-text">
+                <small>WHATSAPP SUPPORT 01</small>
+                <strong>01727003670</strong>
+              </span>
+
+              <svg class="arrow" aria-hidden="true">
+                <use href="#i-external"/>
+              </svg>
+            </a>
+
+            <a class="contact-link"
+               href="https://wa.me/8801316487435?text=Assalamu%20Alaikum%2C%20ami%20GHOTI%20MARKET%20account%20deletion%20request%20korte%20chai.%0AAccount%20type%3A%20"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="01316487435 নম্বরে WhatsApp করুন">
+
+              <span class="contact-icon">
+                <svg class="icon-lg" aria-hidden="true">
+                  <use href="#i-message"/>
+                </svg>
+              </span>
+
+              <span class="contact-text">
+                <small>WHATSAPP SUPPORT 02</small>
+                <strong>01316487435</strong>
+              </span>
+
+              <svg class="arrow" aria-hidden="true">
+                <use href="#i-external"/>
+              </svg>
+            </a>
+
+            <a class="contact-link email-link"
+               href="mailto:support@ghotimarket.com?subject=GHOTI%20MARKET%20Account%20Deletion%20Request&body=Hello%20GHOTI%20MARKET%20Support%2C%0A%0AI%20would%20like%20to%20request%20permanent%20deletion%20of%20my%20account%20and%20associated%20personal%20data.%0A%0AAccount%20type%3A%0ARegistered%20phone%20or%20email%3A%0A%0APlease%20guide%20me%20through%20the%20secure%20ownership%20verification%20process.%0A%0AThank%20you.">
+
+              <span class="contact-icon">
+                <svg class="icon-lg" aria-hidden="true">
+                  <use href="#i-mail"/>
+                </svg>
+              </span>
+
+              <span class="contact-text">
+                <small>OFFICIAL SUPPORT EMAIL</small>
+                <strong>support@ghotimarket.com</strong>
+              </span>
+
+              <svg class="arrow" aria-hidden="true">
+                <use href="#i-arrow"/>
+              </svg>
+            </a>
+
+          </div>
+
+          <p class="contact-disclaimer">
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-info"/>
+            </svg>
+            <span>
+              যোগাযোগের বাটন চাপলে আপনার ডিভাইসে WhatsApp
+              অথবা ইমেইল অ্যাপ খুলবে। রিকোয়েস্টটি সম্পন্ন
+              করতে বার্তাটি আপনাকে নিজে পাঠাতে হবে।
+              এই পেজ নিজে থেকে কোনো অ্যাকাউন্ট বা ডেটা
+              ডিলিট করে না।
+            </span>
+          </p>
+
+        </div>
+      </section>
+
+      <section class="section faq-section reveal">
+        <div class="section-heading">
+          <div class="section-tag">HELP CENTER</div>
+          <h2>সাধারণ প্রশ্ন ও উত্তর</h2>
+          <p class="section-description">
+            অ্যাকাউন্ট ডিলিট এবং ব্যক্তিগত ডেটা সম্পর্কে
+            গুরুত্বপূর্ণ তথ্য।
+          </p>
+        </div>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>
+              অ্যাকাউন্ট ডিলিট করতে কত দিন সময় লাগবে?
+            </summary>
+            <div class="faq-answer">
+              মালিকানা যাচাই সম্পন্ন হওয়ার পর সাধারণ
+              পরিস্থিতিতে ২–৭ দিনের মধ্যে অনুরোধ সম্পন্ন
+              করার লক্ষ্য রাখা হবে। জটিলতা বা বৈধ
+              সংরক্ষণ-সংক্রান্ত প্রয়োজন থাকলে সময়
+              বেশি লাগতে পারে।
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              আমি কি নিজে সরাসরি অ্যাকাউন্ট ডিলিট করতে পারব?
+            </summary>
+            <div class="faq-answer">
+              এই পেজে সরাসরি ডিলিট করার সুবিধা নেই।
+              WhatsApp অথবা ইমেইলে সাপোর্ট টিমের কাছে
+              অনুরোধ করতে হবে। তবে সব ধরনের অ্যাকাউন্টের
+              জন্য ডিলিট রিকোয়েস্ট জমা দেওয়ার ব্যবস্থা রয়েছে।
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              ডিলিট করলে কি আমার সব ডেটা হারিয়ে যাবে?
+            </summary>
+            <div class="faq-answer">
+              আপনার অ্যাকাউন্ট এবং প্রযোজ্য সংশ্লিষ্ট
+              ব্যক্তিগত ডেটা মুছে ফেলা হবে। মুছে ফেলা
+              ডেটা পুনরুদ্ধার করা সম্ভব নাও হতে পারে।
+              বৈধ আইনগত বা নিয়ন্ত্রক বাধ্যবাধকতায়
+              কিছু রেকর্ড সংরক্ষিত থাকতে পারে।
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              অর্ডার বা লেনদেনের রেকর্ডের কী হবে?
+            </summary>
+            <div class="faq-answer">
+              প্রযোজ্য ব্যক্তিগত ডেটা মুছে ফেলার অনুরোধ
+              প্রক্রিয়া করা হবে। আইনগত, হিসাবরক্ষণ,
+              নিরাপত্তা বা জালিয়াতি প্রতিরোধের বৈধ
+              প্রয়োজন থাকলে কিছু রেকর্ড নির্ধারিত
+              সময়ের জন্য সংরক্ষণ করা হতে পারে।
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              অ্যাপে লগইন না করেও কি রিকোয়েস্ট করা যাবে?
+            </summary>
+            <div class="faq-answer">
+              হ্যাঁ। এই পেজটি পাবলিক এবং এখানে আসতে
+              অ্যাপে লগইন করার প্রয়োজন নেই। আপনি
+              WhatsApp অথবা ইমেইলের মাধ্যমে যোগাযোগ
+              করতে পারবেন।
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Seller, Reseller বা Affiliate Account কীভাবে ডিলিট হবে?
+            </summary>
+            <div class="faq-answer">
+              এসব অ্যাকাউন্ট সরাসরি এই পেজ থেকে ডিলিট
+              করা যাবে না। সাপোর্ট টিমে অনুরোধ জমা দিয়ে
+              মালিকানা যাচাই করতে হবে। এরপর সংশ্লিষ্ট
+              অ্যাকাউন্ট ও প্রযোজ্য ব্যক্তিগত ডেটা
+              মুছে ফেলার প্রক্রিয়া শুরু হবে।
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+
+    <a href="https://ghotimarket.com"
+       aria-label="GHOTI MARKET হোমপেজে যান">
+
+      <img
+        class="footer-logo"
+        src="https://i.ibb.co.com/RG2hrf3y/background-remove-ghoti-market.png"
+        alt="GHOTI MARKET"
+        width="66"
+        height="66"
+        loading="lazy">
+    </a>
+
+    <div class="footer-name">
+      GHOTI <span>MARKET</span>
+    </div>
+
+    <p class="footer-description">
+      আপনার কেনা-বেচার বিশ্বস্ত ঠিকানা
+    </p>
+
+    <nav class="footer-links" aria-label="ফুটার লিংক">
+      <a href="https://ghotimarket.com">হোম</a>
+      <a href="https://about.ghotimarket.com">আমাদের সম্পর্কে</a>
+      <a href="https://app.ghotimarket.com">অ্যাপ ডাউনলোড</a>
+      <a href="https://seller.ghotimarket.com/signup">সেলার অ্যাকাউন্ট</a>
+      <a href="#contact">সাপোর্ট</a>
+    </nav>
+
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> GHOTI MARKET.
+      All rights reserved.
+    </div>
+
+  </footer>
+
+  <script>
+    "use strict";
+
+    // Display today's date in Bangladesh time.
+    function updateBangladeshDate() {
+      const now = new Date();
+
+      const dateElement = document.getElementById("today");
+      const yearElement = document.getElementById("year");
+
+      const isoDate = new Intl.DateTimeFormat("en-CA", {
+        timeZone: "Asia/Dhaka",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+      }).format(now);
+
+      const banglaDate = new Intl.DateTimeFormat("bn-BD", {
+        timeZone: "Asia/Dhaka",
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+      }).format(now);
+
+      dateElement.textContent = banglaDate;
+      dateElement.setAttribute("datetime", isoDate);
+
+      yearElement.textContent = new Intl.DateTimeFormat("en", {
+        timeZone: "Asia/Dhaka",
+        year: "numeric"
+      }).format(now);
+    }
+
+    updateBangladeshDate();
+
+    // Smooth reveal animation for sections.
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.08,
+          rootMargin: "0px 0px -25px 0px"
+        }
+      );
+
+      revealElements.forEach(element => {
+        revealObserver.observe(element);
+      });
+    } else {
+      revealElements.forEach(element => {
+        element.classList.add("visible");
+      });
+    }
+
+    // Allow only one FAQ item to remain open at a time.
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+      item.addEventListener("toggle", () => {
+        if (item.open) {
+          faqItems.forEach(other => {
+            if (other !== item) {
+              other.open = false;
+            }
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
